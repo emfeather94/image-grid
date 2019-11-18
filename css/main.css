@@ -16,6 +16,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+}
+
 img {
   width: 100%;
   display: block;
@@ -24,6 +28,15 @@ img {
 section {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+}
+
+.photo:nth-child(2) {
+  display: none;
+}
+
+.photo:nth-child(5) {
+  display: none;
 }
 
 @media only screen and (min-width: 25em) {
@@ -33,13 +46,22 @@ section {
     width: 100%;
   }
 
+  .photo:nth-child(2) {
+    display: block;
+  }
+
+  .photo:nth-child(5) {
+    display: block;
+  }
+
   .photo {
     width: 50%;
     display: inline-block;
   }
+
 }
 
-@media only screen and (min-width: 38em) {}
+@media only screen and (min-width: 38em) {
 
   .photo:first-child {
     display: block;
@@ -47,26 +69,29 @@ section {
   }
 
   .photo {
-    width: 33.33%;
+    width: 33.3333%;
     display: inline-block;
   }
 
   .photo:last-child {
     display: none;
   }
+
 }
 
 @media only screen and (min-width: 60em) {
 
   .photo:first-child {
-    width: 66.66%;
+    width: 66.6666%;
   }
+
   .photo {
-    width: 33.33%;
+    width: 33.3333%;
     display: inline-block;
   }
 
   .photo:last-child {
     display: inline-block;
   }
+
 }
